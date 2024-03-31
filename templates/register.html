@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<div style="text-align: center; line-height: 28px;">
+    <h1 style="font-size: 42px;">Register</h1>
+    <form action="/register" method="POST">
+        <label for="email">Email:</label><br>
+        <input type="text" name="email"><br>
+        <label for="username">Username:</label><br>
+        <input type="text" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" name="password"><br>
+        <label for="password-conf">Confirm Password:</label><br>
+        <input type="password" name="password-conf"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p style="color: red;">
+        {% for reason in rejectreasons %}
+        {{ reason }}<br>
+        {% endfor %}
+    </p>
+    <p>Already have an account? <a href="/login">Login here!</a></p>
+</div>
+{% endblock %}

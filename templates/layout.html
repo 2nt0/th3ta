@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="/static/styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.png">
+    <title>Vanadite | {% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="nav-menu">
+        <img src="/static/logo.png" style="height:72px">
+        <a class="nav-button-container" href="/profile"><div class="profile-button"><img class="pfp" src="{{ pfp }}"></div></a>
+        <a class="nav-button-container" href="/contact"><div class="nav-button">Contact</div></a>
+        <a class="nav-button-container" href="/about"><div class="nav-button">About</div></a>
+        <a class="nav-button-container" href="/"><div class="nav-button">Home</div></a>
+    </div>
+    <div class="mainbody">
+        {% block content %}{% endblock %}
+    </div>
+    <div class="footer">
+        <p>hi guys lol</p>
+    </div>
+</body>

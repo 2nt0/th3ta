@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div style="text-align: center;">
+    <h1 style="font-size: 42px;">Login</h1>
+    <form action="/login" method="POST">
+        <label>Username:</label><br>
+        <input type="text" name="username"><br><br>
+        <label>Password:</label><br>
+        <input type="password" name="password"><br>
+        <a href="/forgot-password" style="font-size: 11px;">Forgot Password?</a><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p style="color:red;">{{ rejectreasons }}</p>
+    <p>Don't have an account? <a href="/register">Register with us!</a></p>
+</div>
+{% endblock %}
